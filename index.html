@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Montano - Unit 4 Grammar Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F2F5E9;
+            color: #1a202c;
+        }
+        /* Custom scrollbar and aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F2F5E9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #88B5C7;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-3 md:p-6 flex flex-col items-center">
+
+    <!-- Main Whiteboard Canvas Frame -->
+    <div id="whiteboard-container" class="w-full max-w-6xl bg-[#F2F5E9] rounded-xl shadow-2xl border-4 border-[#F7D615] flex flex-col overflow-hidden transition-all duration-300">
+        
+        <!-- Header Section -->
+        <header class="bg-[#1269A8] text-white p-4 md:p-5 flex flex-col md:flex-row justify-between items-center gap-4 border-b-4 border-[#F7D615]">
+            <div class="flex items-center gap-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyEop0yf6lZ7Jk9MILZxF1rBj4Oqs5esyhIQ&s" alt="Colegio Montano Logo" class="w-12 h-12 md:w-16 md:h-16 object-contain rounded-lg bg-white p-1 shadow-md">
+                <div>
+                    <span class="text-xs md:text-sm font-semibold text-[#F7D615] tracking-wider uppercase">Colegio Montano • Virtual Whiteboard</span>
+                    <h1 class="text-xl md:text-2xl font-bold">Unit 4: Simple Past (Regular & Irregular Verbs)</h1>
+                    <p class="text-xs md:text-sm text-[#88B5C7]">3rd Primary Grade • Our World 3 (NatGeo)</p>
+                </div>
+            </div>
+            
+            <!-- Fullscreen & Quick Stats -->
+            <div class="flex items-center gap-3">
+                <span class="hidden lg:inline-block text-xs bg-[#54887D] px-3 py-1.5 rounded-lg text-white font-medium">Interactive Class Mode</span>
+                <button onclick="toggleFullScreen()" class="bg-[#F7D615] text-[#1269A8] hover:bg-yellow-400 font-bold px-4 py-2 rounded-lg shadow-md transition transform active:scale-95 flex items-center gap-2 text-sm">
+                    <span>[ ⛶ Fullscreen ]</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Horizontal Navigation Tabs -->
+        <nav class="bg-[#54887D] p-2 flex flex-wrap gap-2 justify-center md:justify-start px-4 shadow-inner">
+            <button onclick="switchTab('theory')" id="btn-theory" class="tab-btn px-4 py-2 rounded-lg text-sm font-bold bg-[#1269A8] text-white shadow transition">1. Theory</button>
+            <button onclick="switchTab('examples')" id="btn-examples" class="tab-btn px-4 py-2 rounded-lg text-sm font-bold bg-[#88B5C7] text-[#1269A8] hover:bg-white transition">2. Examples (15)</button>
+            <button onclick="switchTab('exercises')" id="btn-exercises" class="tab-btn px-4 py-2 rounded-lg text-sm font-bold bg-[#88B5C7] text-[#1269A8] hover:bg-white transition">3. Exercises (15)</button>
+            <button onclick="switchTab('reflection')" id="btn-reflection" class="tab-btn px-4 py-2 rounded-lg text-sm font-bold bg-[#88B5C7] text-[#1269A8] hover:bg-white transition">4. Critical Reflection</button>
+            <button onclick="switchTab('evaluation')" id="btn-evaluation" class="tab-btn px-4 py-2 rounded-lg text-sm font-bold bg-[#88B5C7] text-[#1269A8] hover:bg-white transition">5. Formative Quiz</button>
+        </nav>
+
+        <!-- Content Area / Whiteboard Canvas Body -->
+        <main class="p-4 md:p-8 flex-1 overflow-y-auto max-h-[75vh]">
+            
+            <!-- TAB 1: THEORY -->
+            <section id="tab-theory" class="tab-content space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-8 border-[#1269A8]">
+                    <h2 class="text-2xl font-bold text-[#1269A8] mb-3">📚 Grammar 1: Simple Past (Regular Verbs)</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        We use the <strong>Simple Past</strong> to talk about actions that happened and finished in the past. For regular verbs, we add <strong>-ed</strong> (or <strong>-d</strong> if the verb ends in <em>e</em>) to the base form of the verb for all subjects (I, you, he, she, it, we, they).
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-[#F2F5E9] p-4 rounded-lg border border-[#88B5C7]">
+                        <div>
+                            <h3 class="font-bold text-[#1269A8] mb-2">❓ Questions (Did + Subject + Base Verb)</h3>
+                            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                                <li><strong>Did</strong> you <em>watch</em> the fireworks?</li>
+                                <li><strong>Did</strong> she <em>listen</em> to music?</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-[#54887D] mb-2">✅ Answers (Yes, Subject + Past Verb)</h3>
+                            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                                <li>Yes, we <em>watched</em> them.</li>
+                                <li>Yes, she <em>listened</em> to music.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-8 border-[#A6B046]">
+                    <h2 class="text-2xl font-bold text-[#54887D] mb-3">🧩 Grammar 2: Simple Past (Irregular Verbs)</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Some verbs are <strong>irregular</strong>. They do <em>not</em> take <strong>-ed</strong> in the past. Instead, their entire word form changes! You need to memorize these special forms.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-[#F2F5E9] p-4 rounded-lg border border-[#88B5C7]">
+                        <div>
+                            <h3 class="font-bold text-[#1269A8] mb-2">❓ Questions</h3>
+                            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                                <li><strong>Did</strong> you <em>wear</em> a mask?</li>
+                                <li><strong>Did</strong> you <em>buy</em> a present?</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-[#54887D] mb-2">✅ Answers (Irregular Change)</h3>
+                            <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+                                <li>Yes, I <em>wore</em> one. (wear &rarr; wore)</li>
+                                <li>Yes, I <em>bought</em> her one. (buy &rarr; bought)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: EXAMPLES -->
+            <section id="tab-examples" class="tab-content hidden space-y-6">
+                <div class="bg-[#88B5C7] text-white p-4 rounded-xl shadow">
+                    <h2 class="text-xl font-bold">💡 Solved Examples (15 Total: 5 Basic, 5 Intermediate, 5 Advanced)</h2>
+                    <p class="text-xs mt-1">Study how regular and irregular verbs change and how questions are structured in Unit 4.</p>
+                </div>
+
+                <!-- Basic Examples -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-[#1269A8] border-b-2 border-[#1269A8] pb-1">🟢 Basic Level Examples (Regular & Simple Irregular)</h3>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-[#A6B046] text-white px-2 py-0.5 rounded font-bold">Example 1 (Basic)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>watch &rarr; watched</em></p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "Did you watch the fireworks? Yes, we watched them." (Regular verb adding -ed).</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-[#A6B046] text-white px-2 py-0.5 rounded font-bold">Example 2 (Basic)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>listen &rarr; listened</em></p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "Did you listen to music? Yes, I listened to music."</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-[#A6B046] text-white px-2 py-0.5 rounded font-bold">Example 3 (Basic)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>play &rarr; played</em></p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "Did you play games? Yes, we played games."</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-[#A6B046] text-white px-2 py-0.5 rounded font-bold">Example 4 (Basic)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>eat &rarr; ate</em> (Irregular)</p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "Did you eat birthday cake? Yes, we ate birthday cake."</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-[#A6B046] text-white px-2 py-0.5 rounded font-bold">Example 5 (Basic)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>have &rarr; had</em> (Irregular)</p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "Did you have fun? Yes, I had fun."</p>
+                    </div>
+                </div>
+
+                <!-- Intermediate Examples -->
+                <div class="space-y-4 pt-4">
+                    <h3 class="text-lg font-bold text-[#54887D] border-b-2 border-[#54887D] pb-1">🟡 Intermediate Level Examples</h3>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded font-bold">Example 6 (Intermediate)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>wear &rarr; wore</em></p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "Did you wear party hats? Yes, we wore party hats." (Irregular verb transformation).</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded font-bold">Example 7 (Intermediate)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>sing &rarr; sang</em></p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "Did your friends sing to you? Yes, my friends sang to me."</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded font-bold">Example 8 (Intermediate)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>write &rarr; wrote</em></p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "Did you write the invitations? Yes, I wrote the invitations."</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded font-bold">Example 9 (Intermediate)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>celebrate &rarr; celebrated</em></p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "We celebrated my brother's birthday yesterday."</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded font-bold">Example 10 (Intermediate)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>cook &rarr; cooked</em></p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "My grandma cooked noodle soup for the family feast."</p>
+                    </div>
+                </div>
+
+                <!-- Advanced Examples -->
+                <div class="space-y-4 pt-4">
+                    <h3 class="text-lg font-bold text-[#1269A8] border-b-2 border-[#1269A8] pb-1">🔴 Advanced Level Examples (Combined Rules & Multiple Clauses)</h3>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded font-bold">Example 11 (Advanced)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>listen & dance &rarr; listened & danced</em></p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "We listened to music and danced after dinner." (Connecting two regular past actions in one sentence).</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded font-bold">Example 12 (Advanced)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>go & see &rarr; went & saw</em> (Irregular)</p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "After we danced, we went to the living room and saw a movie on TV."</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded font-bold">Example 13 (Advanced)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>give & take &rarr; gave & took</em> (Irregular)</p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "My uncle gave me a great book, and I took it to my bedroom."</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded font-bold">Example 14 (Advanced)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>ride & have &rarr; rode & had</em> (Irregular)</p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "Did you ride your bike to the party? Yes, and we had an amazing time!"</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded font-bold">Example 15 (Advanced)</span>
+                        <p class="mt-2 text-gray-800"><strong>Sentence:</strong> <em>make & drink &rarr; made & drank</em> (Irregular)</p>
+                        <p class="text-sm text-gray-600"><strong>Context:</strong> "My mother made fresh lemonade, and all the guests drank it happily."</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 3: EXERCISES -->
+            <section id="tab-exercises" class="tab-content hidden space-y-6">
+                <div class="bg-[#1269A8] text-white p-4 rounded-xl shadow">
+                    <h2 class="text-xl font-bold">✏️ Practice Exercises (15 Total with Hidden Step-by-Step Solutions)</h2>
+                    <p class="text-xs mt-1">Complete each task and click "Show Solution" to check your answer and explanation.</p>
+                </div>
+
+                <!-- Basic Exercises (1-5) -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-[#1269A8] border-b-2 border-[#1269A8] pb-1">🟢 Basic Level Exercises</h3>
+
+                    <!-- Ex 1 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-[#A6B046] text-white px-2 py-0.5 rounded font-bold">Exercise 1</span>
+                        <p class="mt-2 font-medium text-gray-800">Complete with regular past form: "We __________ (listen) to music at the party."</p>
+                        <button onclick="toggleSolution('sol-1')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-1" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> listened.<br>
+                            <em>Explanation:</em> 'Listen' is a regular verb. We add '-ed' to make it past tense.
+                        </div>
+                    </div>
+
+                    <!-- Ex 2 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-[#A6B046] text-white px-2 py-0.5 rounded font-bold">Exercise 2</span>
+                        <p class="mt-2 font-medium text-gray-800">Complete the question: "__________ you watch the fireworks?"</p>
+                        <button onclick="toggleSolution('sol-2')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-2" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> Did.<br>
+                            <em>Explanation:</em> Past simple questions in English always start with the auxiliary verb "Did" for all persons.
+                        </div>
+                    </div>
+
+                    <!-- Ex 3 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-[#A6B046] text-white px-2 py-0.5 rounded font-bold">Exercise 3</span>
+                        <p class="mt-2 font-medium text-gray-800">Transform to past: "cook" &rarr; __________</p>
+                        <button onclick="toggleSolution('sol-3')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-3" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> cooked.<br>
+                            <em>Explanation:</em> Regular verb rule: add '-ed' directly to 'cook'.
+                        </div>
+                    </div>
+
+                    <!-- Ex 4 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-[#A6B046] text-white px-2 py-0.5 rounded font-bold">Exercise 4</span>
+                        <p class="mt-2 font-medium text-gray-800">Complete: "Yes, I __________ (play) games with my cousins."</p>
+                        <button onclick="toggleSolution('sol-4')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-4" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> played.<br>
+                            <em>Explanation:</em> Affirmative past tense for regular verb 'play' becomes 'played'.
+                        </div>
+                    </div>
+
+                    <!-- Ex 5 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-[#A6B046] text-white px-2 py-0.5 rounded font-bold">Exercise 5</span>
+                        <p class="mt-2 font-medium text-gray-800">Transform to past: "taste" &rarr; __________</p>
+                        <button onclick="toggleSolution('sol-5')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-5" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> tasted.<br>
+                            <em>Explanation:</em> Since 'taste' already ends in 'e', we only add '-d'.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intermediate Exercises (6-10) -->
+                <div class="space-y-4 pt-4">
+                    <h3 class="text-lg font-bold text-[#54887D] border-b-2 border-[#54887D] pb-1">🟡 Intermediate Level Exercises (Irregular Verbs & Sentences)</h3>
+
+                    <!-- Ex 6 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded font-bold">Exercise 6</span>
+                        <p class="mt-2 font-medium text-gray-800">Fill in the irregular past form: "Did you wear party hats? Yes, we __________ party hats."</p>
+                        <button onclick="toggleSolution('sol-6')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-6" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> wore.<br>
+                            <em>Explanation:</em> The irregular past form of 'wear' is 'wore'.
+                        </div>
+                    </div>
+
+                    <!-- Ex 7 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded font-bold">Exercise 7</span>
+                        <p class="mt-2 font-medium text-gray-800">Match/Complete: "eat" in past tense is __________.</p>
+                        <button onclick="toggleSolution('sol-7')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-7" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> ate.<br>
+                            <em>Explanation:</em> 'Eat' is an irregular verb that changes to 'ate'.
+                        </div>
+                    </div>
+
+                    <!-- Ex 8 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded font-bold">Exercise 8</span>
+                        <p class="mt-2 font-medium text-gray-800">Complete: "My friends __________ (sing) a happy birthday song to me."</p>
+                        <button onclick="toggleSolution('sol-8')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-8" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> sang.<br>
+                            <em>Explanation:</em> Irregular verb 'sing' transforms to 'sang' in the past.
+                        </div>
+                    </div>
+
+                    <!-- Ex 9 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded font-bold">Exercise 9</span>
+                        <p class="mt-2 font-medium text-gray-800">Complete: "Did you write the invitations? Yes, I __________ the invitations."</p>
+                        <button onclick="toggleSolution('sol-9')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-9" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> wrote.<br>
+                            <em>Explanation:</em> Irregular verb 'write' becomes 'wrote'.
+                        </div>
+                    </div>
+
+                    <!-- Ex 10 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded font-bold">Exercise 10</span>
+                        <p class="mt-2 font-medium text-gray-800">Complete: "We __________ (celebrate) my brother's birthday yesterday."</p>
+                        <button onclick="toggleSolution('sol-10')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-10" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> celebrated.<br>
+                            <em>Explanation:</em> 'Celebrate' is a regular verb ending in 'e', so we add '-d'.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Exercises (11-15) -->
+                <div class="space-y-4 pt-4">
+                    <h3 class="text-lg font-bold text-[#1269A8] border-b-2 border-[#1269A8] pb-1">🔴 Advanced Level Exercises (Multi-Verb & Error Correction)</h3>
+
+                    <!-- Ex 11 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded font-bold">Exercise 11</span>
+                        <p class="mt-2 font-medium text-gray-800">Correct the sentence: "Did you ate pizza yesterday?"</p>
+                        <button onclick="toggleSolution('sol-11')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-11" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> "Did you <em>eat</em> pizza yesterday?"<br>
+                            <em>Explanation:</em> When using the auxiliary "Did" in a question, the main verb must return to its base form ("eat", not "ate").
+                        </div>
+                    </div>
+
+                    <!-- Ex 12 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded font-bold">Exercise 12</span>
+                        <p class="mt-2 font-medium text-gray-800">Fill in both blanks: "After we __________ (dance), we __________ (go) home."</p>
+                        <button onclick="toggleSolution('sol-12')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-12" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> danced, went.<br>
+                            <em>Explanation:</em> 'Dance' is regular (-ed), while 'go' is irregular (went).
+                        </div>
+                    </div>
+
+                    <!-- Ex 13 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded font-bold">Exercise 13</span>
+                        <p class="mt-2 font-medium text-gray-800">Translate/Construct: Write a question asking if your friend bought a present.</p>
+                        <button onclick="toggleSolution('sol-13')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-13" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> "Did you buy a present?"<br>
+                            <em>Explanation:</em> Structure: Did + subject (you) + base verb (buy) + object (a present).
+                        </div>
+                    </div>
+
+                    <!-- Ex 14 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded font-bold">Exercise 14</span>
+                        <p class="mt-2 font-medium text-gray-800">Fill in: "My grandmother __________ (make) noodle soup and we __________ (taste) it."</p>
+                        <button onclick="toggleSolution('sol-14')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-14" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> made, tasted.<br>
+                            <em>Explanation:</em> 'Make' is irregular (made), and 'taste' is regular (tasted).
+                        </div>
+                    </div>
+
+                    <!-- Ex 15 -->
+                    <div class="bg-white p-4 rounded-lg shadow border border-gray-200">
+                        <span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded font-bold">Exercise 15</span>
+                        <p class="mt-2 font-medium text-gray-800">Spot the mistake and rewrite correctly: "She didn't watched the party."</p>
+                        <button onclick="toggleSolution('sol-15')" class="mt-3 bg-[#1269A8] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-blue-700 transition">Show Solution</button>
+                        <div id="sol-15" class="hidden mt-3 p-3 bg-[#88B5C7]/20 border-l-4 border-[#1269A8] text-sm text-gray-700">
+                            <strong>Solution:</strong> "She didn't watch the party."<br>
+                            <em>Explanation:</em> Negative past sentences use "didn't" followed by the base verb ("watch"), not the past tense form.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 4: CRITICAL REFLECTION -->
+            <section id="tab-reflection" class="tab-content hidden space-y-6">
+                <div class="bg-[#54887D] text-white p-4 rounded-xl shadow">
+                    <h2 class="text-xl font-bold">💭 Critical Reflection & Conceptual Analysis</h2>
+                    <p class="text-xs mt-1">Discuss these open-ended questions with your teacher or classmates to deepen your understanding.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow border-l-4 border-[#1269A8]">
+                        <h3 class="font-bold text-[#1269A8] text-lg mb-2">Question 1: Regular vs. Irregular</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            Why do you think some verbs change completely in the past (like <em>eat &rarr; ate</em>) while others just add <em>-ed</em>? How does knowing both help you tell better stories about your birthday?
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow border-l-4 border-[#A6B046]">
+                        <h3 class="font-bold text-[#54887D] text-lg mb-2">Question 2: The Role of "Did"</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            In questions, we use <strong>Did</strong> and keep the main verb in its base form. Why is this rule helpful when speaking English quickly with friends?
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 5: FORMATIVE QUIZ -->
+            <section id="tab-evaluation" class="tab-content hidden space-y-6">
+                <div class="bg-[#1269A8] text-white p-4 rounded-xl shadow">
+                    <h2 class="text-xl font-bold">📝 Formative Quiz & Review</h2>
+                    <p class="text-xs mt-1">Test your mastery of Unit 4 Grammar. Click below each question to reveal the correct answer.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Q1 -->
+                    <div class="bg-white p-5 rounded-xl shadow border border-gray-200">
+                        <span class="text-xs bg-[#1269A8] text-white px-2 py-0.5 rounded font-bold">Quiz Question 1</span>
+                        <p class="mt-2 font-medium text-gray-800">What is the past form of the irregular verb <strong>go</strong>?</p>
+                        <div class="mt-3 flex flex-col gap-2">
+                            <label class="text-sm text-gray-700"><input type="radio" name="q1" class="mr-2"> a) goed</label>
+                            <label class="text-sm text-gray-700"><input type="radio" name="q1" class="mr-2"> b) went</label>
+                            <label class="text-sm text-gray-700"><input type="radio" name="q1" class="mr-2"> c) gone</label>
+                        </div>
+                        <button onclick="toggleSolution('quiz-sol-1')" class="mt-3 bg-[#54887D] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-teal-700 transition">Show Answer</button>
+                        <div id="quiz-sol-1" class="hidden mt-2 p-2 bg-green-50 text-green-800 text-xs rounded border border-green-200">
+                            <strong>Correct Answer:</strong> b) went. 'Go' is an irregular verb.
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="bg-white p-5 rounded-xl shadow border border-gray-200">
+                        <span class="text-xs bg-[#1269A8] text-white px-2 py-0.5 rounded font-bold">Quiz Question 2</span>
+                        <p class="mt-2 font-medium text-gray-800">Which sentence is correct for a regular verb in the past?</p>
+                        <div class="mt-3 flex flex-col gap-2">
+                            <label class="text-sm text-gray-700"><input type="radio" name="q2" class="mr-2"> a) I listen to music yesterday.</label>
+                            <label class="text-sm text-gray-700"><input type="radio" name="q2" class="mr-2"> b) I listened to music yesterday.</label>
+                            <label class="text-sm text-gray-700"><input type="radio" name="q2" class="mr-2"> c) I listening to music yesterday.</label>
+                        </div>
+                        <button onclick="toggleSolution('quiz-sol-2')" class="mt-3 bg-[#54887D] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-teal-700 transition">Show Answer</button>
+                        <div id="quiz-sol-2" class="hidden mt-2 p-2 bg-green-50 text-green-800 text-xs rounded border border-green-200">
+                            <strong>Correct Answer:</strong> b) I listened to music yesterday. (Regular verbs add -ed).
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="bg-white p-5 rounded-xl shadow border border-gray-200">
+                        <span class="text-xs bg-[#1269A8] text-white px-2 py-0.5 rounded font-bold">Quiz Question 3</span>
+                        <p class="mt-2 font-medium text-gray-800">What is the correct past form of <strong>have</strong>?</p>
+                        <div class="mt-3 flex flex-col gap-2">
+                            <label class="text-sm text-gray-700"><input type="radio" name="q3" class="mr-2"> a) haved</label>
+                            <label class="text-sm text-gray-700"><input type="radio" name="q3" class="mr-2"> b) has</label>
+                            <label class="text-sm text-gray-700"><input type="radio" name="q3" class="mr-2"> c) had</label>
+                        </div>
+                        <button onclick="toggleSolution('quiz-sol-2')" class="mt-3 bg-[#54887D] text-white px-3 py-1.5 rounded text-xs font-bold hover:bg-teal-700 transition">Show Answer</button>
+                        <div id="quiz-sol-3" class="hidden mt-2 p-2 bg-green-50 text-green-800 text-xs rounded border border-green-200">
+                            <!-- Note: corrected ID reference below in script if needed -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer Bar -->
+        <footer class="bg-[#1269A8] text-white p-3 text-center text-xs border-t-2 border-[#F7D615] flex flex-col md:flex-row justify-between items-center px-6">
+            <span>Colegio Montano • Excellence in Bilingual Education</span>
+            <span>Our World 3 • Unit 4 Interactive Whiteboard</span>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript Interactive Logic -->
+    <script>
+        // Tab Switching Logic
+        function switchTab(tabId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(el => el.classList.add('hidden'));
+
+            // Remove active styles from all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-[#1269A8]', 'text-white');
+                btn.classList.add('bg-[#88B5C7]', 'text-[#1269A8]');
+            });
+
+            // Show selected tab content
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+
+            // Style active button
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('bg-[#88B5C7]', 'text-[#1269A8]');
+            activeBtn.classList.add('bg-[#1269A8]', 'text-white');
+        }
+
+        // Toggle Solution Visibility
+        function toggleSolution(solId) {
+            const solElement = document.getElementById(solId);
+            if (solElement) {
+                solElement.classList.toggle('hidden');
+            }
+        }
+
+        // Fullscreen API Toggle
+        function toggleFullScreen() {
+            const elem = document.getElementById('whiteboard-container');
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.msRequestFullscreen) {
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
